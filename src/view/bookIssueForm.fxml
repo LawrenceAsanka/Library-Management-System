@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../css/dark.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookIssueFormController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="1000.0">
+         <children>
+            <StackPane prefHeight="700.0" prefWidth="1000.0">
+               <children>
+                  <BorderPane prefHeight="700.0" prefWidth="1000.0">
+                     <top>
+                        <MenuBar BorderPane.alignment="CENTER">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="File" visible="false">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                              </items>
+                            </Menu>
+                            <Menu disable="true" mnemonicParsing="false" text="Edit" visible="false">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                              </items>
+                            </Menu>
+                            <Menu disable="true" mnemonicParsing="false" text="Help" visible="false">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="700.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets right="10.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <JFXTabPane layoutX="14.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab text="BOOK ISSUE">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                             <children>
+                                                <VBox prefHeight="638.0" prefWidth="819.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox fx:id="book_info" alignment="CENTER" prefHeight="261.0" prefWidth="819.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER" spacing="20.0">
+                                                               <HBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </HBox.margin>
+                                                               <children>
+                                                                  <JFXTextField fx:id="txtBookID" alignment="TOP_LEFT" labelFloat="true" onAction="#loadBooks" prefHeight="28.0" prefWidth="200.0" promptText="BOOK ID" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER" prefWidth="450.0">
+                                                               <children>
+                                                                  <Label fx:id="lblBookName" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="565.0" styleClass="main-text" stylesheets="@../css/dark.css" text="BOOK NAME">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="lblISBN" alignment="CENTER" layoutX="10.0" layoutY="107.0" prefHeight="27.0" prefWidth="592.0" styleClass="main-text" stylesheets="@../css/dark.css" text="ISBN">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="lblAuthor" alignment="CENTER" layoutX="10.0" layoutY="121.0" prefHeight="27.0" prefWidth="592.0" styleClass="main-text" stylesheets="@../css/dark.css" text="AUTHOR">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="lblAvailable" alignment="CENTER" layoutX="10.0" layoutY="134.0" prefHeight="27.0" prefWidth="592.0" styleClass="main-text" stylesheets="@../css/dark.css" text="AVAILABILITY">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                               <HBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </HBox.margin>
+                                                            </VBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox fx:id="member_info" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="261.0" prefWidth="819.0" stylesheets="@../css/dark.css">
+                                                         <children>
+                                                            <VBox alignment="CENTER" spacing="20.0">
+                                                               <HBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </HBox.margin>
+                                                               <children>
+                                                                  <JFXTextField fx:id="txtMemberID" alignment="TOP_LEFT" labelFloat="true" onAction="#loadMember_OnAction" prefHeight="28.0" prefWidth="214.0" promptText="MEMBER ID" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER" prefWidth="450.0">
+                                                               <children>
+                                                                  <Label fx:id="lblMemberName" alignment="CENTER" prefHeight="27.0" prefWidth="592.0" styleClass="main-text" stylesheets="@../css/dark.css" text="MEMBER NAME">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="lblNIC" alignment="CENTER" layoutX="10.0" layoutY="107.0" prefHeight="27.0" prefWidth="592.0" styleClass="main-text" stylesheets="@../css/dark.css" text="NIC">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="lblContact" alignment="CENTER" layoutX="10.0" layoutY="121.0" prefHeight="27.0" prefWidth="592.0" styleClass="main-text" stylesheets="@../css/dark.css" text="CONTACT">
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <JFXDatePicker fx:id="txtDate" prefHeight="29.0" prefWidth="144.0" promptText="DATE" styleClass="text-field">
+                                                                     <cursor>
+                                                                        <Cursor fx:constant="HAND" />
+                                                                     </cursor>
+                                                                  </JFXDatePicker>
+                                                               </children>
+                                                               <HBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </HBox.margin>
+                                                            </VBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <JFXButton fx:id="btnIssue" buttonType="RAISED" onAction="#btnIssue_OnAction" prefHeight="46.0" prefWidth="126.0" ripplerFill="#e4dcdc" styleClass="login-button" text="ISSUE" textFill="#e2e2e2">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets right="100.0" />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="RETURN BOOK">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1000.0">
+                                             <children>
+                                                <VBox layoutY="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox>
+                                                         <children>
+                                                            <JFXTextField fx:id="txtMember_id" labelFloat="true" prefHeight="35.0" prefWidth="161.0" promptText="SEARCH WITH ID">
+                                                               <HBox.margin>
+                                                                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                                               </HBox.margin>
+                                                            </JFXTextField>
+                                                            <VBox prefHeight="354.0" prefWidth="599.0">
+                                                               <HBox.margin>
+                                                                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                               </HBox.margin>
+                                                               <children>
+                                                                  <TableView fx:id="tblIssueDetails" prefHeight="333.0" prefWidth="589.0" stylesheets="@../css/table.css">
+                                                                     <columns>
+                                                                        <TableColumn prefWidth="75.0" text="ISSUE ID" />
+                                                                        <TableColumn prefWidth="94.0" text="ISSUE DATE" />
+                                                                        <TableColumn prefWidth="103.0" text="MEMBER ID" />
+                                                                        <TableColumn prefWidth="92.0" text="BOOK ID" />
+                                                                        <TableColumn prefWidth="128.0" text="BOOK NAME" />
+                                                                        <TableColumn prefWidth="106.0" text="KEPT DATES" />
+                                                                     </columns>
+                                                                  </TableView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox alignment="TOP_RIGHT" layoutX="30.0" layoutY="30.0">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <VBox prefHeight="340.0" prefWidth="176.0" styleClass="main-text">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <children>
+                                                                  <Label styleClass="main-text" text="DATE:">
+                                                                     <VBox.margin>
+                                                                        <Insets left="15.0" right="10.0" top="30.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="10.0" styleClass="main-text" text="BOOK ID:">
+                                                                     <VBox.margin>
+                                                                        <Insets left="15.0" right="10.0" top="30.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="28.0" styleClass="main-text" text="BOOK NAME:">
+                                                                     <VBox.margin>
+                                                                        <Insets left="15.0" right="10.0" top="30.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="46.0" styleClass="main-text" text="AVAILABILITY:">
+                                                                     <VBox.margin>
+                                                                        <Insets left="15.0" right="10.0" top="35.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label layoutX="20.0" layoutY="179.0" styleClass="main-text" text="FINE FEE:">
+                                                                     <VBox.margin>
+                                                                        <Insets left="15.0" right="10.0" top="30.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="10.0" layoutY="10.0" prefHeight="340.0" prefWidth="543.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <children>
+                                                                  <TextField fx:id="txtReturnDate" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="471.0" styleClass="t-field">
+                                                                     <VBox.margin>
+                                                                        <Insets right="350.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtReturnBookID" layoutX="10.0" layoutY="10.0" styleClass="t-field">
+                                                                     <VBox.margin>
+                                                                        <Insets right="350.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtReturnBookName" layoutX="10.0" layoutY="38.0" styleClass="t-field">
+                                                                     <VBox.margin>
+                                                                        <Insets right="350.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtReturnAvailable" layoutX="10.0" layoutY="66.0" styleClass="t-field">
+                                                                     <VBox.margin>
+                                                                        <Insets right="350.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <TextField fx:id="txtFine_Fee" layoutX="20.0" layoutY="174.0" styleClass="t-field">
+                                                                     <VBox.margin>
+                                                                        <Insets right="350.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </TextField>
+                                                                  <JFXButton fx:id="btnReturn" alignment="TOP_LEFT" buttonType="RAISED" onAction="#btnReturn_OnAction" ripplerFill="WHITE" styleClass="login-button" text="RETURN" textFill="#e2e2e2">
+                                                                     <VBox.margin>
+                                                                        <Insets left="125.0" top="15.0" />
+                                                                     </VBox.margin>
+                                                                  </JFXButton>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </JFXTabPane>
+                              <JFXHamburger fx:id="hamburger" styleClass="jfx-hamburger-icon" stylesheets="@../css/dark.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXHamburger>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <right>
+                        <JFXDrawer fx:id="drawer" defaultDrawerSize="120.0" direction="RIGHT" overLayVisible="false" />
+                     </right>
+                  </BorderPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

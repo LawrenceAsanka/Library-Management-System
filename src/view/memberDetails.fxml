@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="555.0" prefWidth="892.0" stylesheets="@../css/dark.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberDetailsController">
+   <children>
+      <HBox layoutX="32.0" layoutY="462.0" prefHeight="93.0" prefWidth="793.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <JFXTextField fx:id="txtName">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNIC" layoutX="20.0" layoutY="20.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" layoutX="214.0" layoutY="20.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txtContact" layoutX="408.0" layoutY="20.0" prefHeight="37.0" prefWidth="194.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <Label layoutX="32.0" layoutY="21.0" prefHeight="40.0" prefWidth="234.0" text="MEMBER DETAILS" textFill="WHITE" underline="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="32.0" layoutY="80.0" prefHeight="30.0" prefWidth="414.0" promptText="SEARCH............................">
+         <padding>
+            <Insets bottom="5.0" left="20.0" right="10.0" />
+         </padding>
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="568.0" layoutY="78.0" onAction="#btnUpdate_OnAction" prefHeight="35.0" prefWidth="88.0" ripplerFill="#2a2e37" styleClass="update-button" stylesheets="@../css/dark.css" text="UPDATE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="731.0" layoutY="78.0" onAction="#btnDelete_OnAction" prefHeight="35.0" prefWidth="88.0" ripplerFill="#2a2e37" styleClass="delete-button" stylesheets="@../css/dark.css" text="DELETE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblMemberDetails" layoutX="32.0" layoutY="163.0" prefHeight="253.0" prefWidth="787.0" stylesheets="@../css/table.css">
+        <columns>
+          <TableColumn prefWidth="88.0" text="ID" />
+          <TableColumn prefWidth="170.0" text="NAME" />
+            <TableColumn prefWidth="157.0" text="NIC" />
+            <TableColumn minWidth="0.0" prefWidth="247.0" text="ADDRESS" />
+            <TableColumn prefWidth="124.0" text="CONTACT" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

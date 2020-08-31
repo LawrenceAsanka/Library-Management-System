@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" cacheShape="false" prefHeight="400.0" prefWidth="150.0" styleClass="toolbar-button" stylesheets="@../css/dark.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToolBarController">
+   <children>
+      <JFXButton fx:id="btnAddMember" contentDisplay="TOP" onAction="#btnAddMember_OnAction" prefHeight="400.0" prefWidth="150.0" styleClass="toolbar-button" stylesheets="@../css/dark.css" text="ADD MEMBER">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/addMember.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAddBook" buttonType="RAISED" contentDisplay="TOP" onAction="#btnAddBook_OnAction" prefHeight="400.0" prefWidth="150.0" styleClass="toolbar-button" stylesheets="@../css/dark.css" text=" ADD BOOK">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/addBook.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnBookDetails" contentDisplay="TOP" onAction="#btnBookDetails_OnAction" prefHeight="400.0" prefWidth="150.0" styleClass="toolbar-button" stylesheets="@../css/dark.css" text="BOOK LIST">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bookDetails.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnMemberDetail" contentDisplay="TOP" onAction="#btnMemberDetail_OnAction" prefHeight="400.0" prefWidth="150.0" styleClass="toolbar-button" stylesheets="@../css/dark.css" text="MEMBER LIST">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/userDetails.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnLogOut" contentDisplay="TOP" onAction="#btnLogout_OnAction" prefHeight="400.0" prefWidth="150.0" styleClass="toolbar-button" stylesheets="@../css/dark.css" text="LOGOUT">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>
