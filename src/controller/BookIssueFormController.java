@@ -182,10 +182,10 @@ public class BookIssueFormController {
         hamburger.addEventFilter(MouseEvent.MOUSE_CLICKED, (EventHandler<Event>) event -> {
             task.setRate(task.getRate() * -1);
             task.play();
-            if (drawer.isHidden()) {
-                drawer.open();
-            } else {
+            if (!drawer.isClosed()) {
                 drawer.close();
+            } else {
+                drawer.open();
             }
         });
     }
