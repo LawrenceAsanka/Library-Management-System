@@ -41,6 +41,13 @@ Library Management System using Java and JDBC with MySQL.
  4. Find Database Configuration From src/dbConnection, and set your Database name,user name and password.
  5. Test it!.
  
+## Features
+
+* Librarians can be given their authorized user name and password without which the system cannot be accessed.
+* After logging in librarians can search for a specific book, book issue or member.
+* Librarians need to make an entry for new books and new members.
+* Librarian can issue available books.
+ 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
