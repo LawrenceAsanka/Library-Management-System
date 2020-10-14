@@ -2,7 +2,8 @@
 
 ## Introduction
 
-Library Management System using Java and JDBC with MySQL.
+An automated system to manage a library. Admin panel for librarians to 
+control and manage the system easily through an interactive interface.
 
 #### Login
 
@@ -36,10 +37,11 @@ Library Management System using Java and JDBC with MySQL.
 ## Installation
 
  1. Clone or Download the repository.
- 2. Download the required library files.
- 3. Create a lib file inside the project directory and copy those jar files into that.
- 4. Find Database Configuration From src/dbConnection, and set your Database name,user name and password.
- 5. Test it!.
+ 2. Create a Database using [script.sql](script.sql) file.
+ 3. Download the required library files.
+ 4. Create a lib file inside the project directory and copy those jar files into that.
+ 5. Find Database Configuration From src/dbConnection, and set your Database name,user name and password.
+ 6. Test it!.
  
 ## Features
 
